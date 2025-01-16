@@ -15,6 +15,7 @@
 
 	// Import the ModalPopup package
 	import createModalPopup from 'viewink';
+	//
 
 	// Initialize the modal
 	const modal = createModalPopup({
