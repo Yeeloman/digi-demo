@@ -5,26 +5,26 @@
 	import RetroGoldenFrame from '$lib/assets/products/retro_golden_frame.jpg';
 	import MinimalistWhiteFrame from '$lib/assets/products/minimalist_white_frame.jpg';
 
-
 	let products = [
-		{ id: 11, name: 'Modern Round Glasses', image: ModernRoundGlasses, price: '$120' },
-		{ id: 12, name: 'Retro Gold Frames', image: RetroGoldenFrame, price: '$140' },
-		{ id: 13, name: 'Sleek Silver Frames', image: SleekSilverFrame, price: '$150' },
-		{ id: 14, name: 'Classic Black Frames', image: ClassicBlackFrame, price: '$100' },
-		{ id: 15, name: 'Minimalist White Frames', image: MinimalistWhiteFrame, price: '$130' }
+		{ id: 'glasses-1', name: 'Modern Round Glasses', image: ModernRoundGlasses, price: '$120' },
+		{ id: 'glasses-2', name: 'Retro Gold Frames', image: RetroGoldenFrame, price: '$140' },
+		{ id: 'glasses-3', name: 'Sleek Silver Frames', image: SleekSilverFrame, price: '$150' },
+		{ id: 'glasses-4', name: 'Classic Black Frames', image: ClassicBlackFrame, price: '$100' },
+		{ id: 'glasses-5', name: 'Minimalist White Frames', image: MinimalistWhiteFrame, price: '$130' }
 	];
 
 	// Import the ModalPopup package
-	import { createModalPopup } from 'viewink';
+	import createModalPopup from 'viewink';
 
 	// Initialize the modal
 	const modal = createModalPopup({
 		url: 'http://127.0.0.1:8000/:store_name/:product_slug/',
+		sandbox: "allow-forms allow-scripts allow-same-origin",
 	});
 
 	function openPopup(productId: number) {
 		// Open the modal with dynamic query parameters
-		modal.openPopup({ store_name: "DigiStore", product_slug: productId.toString() });
+		modal.openPopup({ store_name: 'DigiStore', product_slug: productId.toString() });
 	}
 </script>
 
