@@ -21,6 +21,12 @@
 	const modal = createModalPopup({
 		url: 'http://127.0.0.1:8000/:store_name/:product_slug/',
 		sandbox: "allow-forms allow-scripts allow-same-origin",
+		onClose: () => {
+			const modal = createModalPopup({
+				url: "http://example.com",
+			})
+			modal.openPopup()
+		}
 	});
 
 	function openPopup(productId: number) {
