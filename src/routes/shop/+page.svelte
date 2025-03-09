@@ -7,27 +7,47 @@
 	import RetroGoldenFrame from '$lib/assets/products/retro_golden_frame.jpg';
 	import MinimalistWhiteFrame from '$lib/assets/products/minimalist_white_frame.jpg';
 
-	let store_name = 'DigiStore';
-
 	let products = [
-		{ slug: 'glasses-1', name: 'Modern Round Glasses', image: ModernRoundGlasses, price: '$120' },
-		{ slug: 'glasses-2', name: 'Retro Gold Frames', image: RetroGoldenFrame, price: '$140' },
-		{ slug: 'glasses-3', name: 'Sleek Silver Frames', image: SleekSilverFrame, price: '$150' },
-		{ slug: 'glasses-4', name: 'Classic Black Frames', image: ClassicBlackFrame, price: '$100' },
 		{
-			slug: 'glasses-5',
+			slug: 'attention',
+			name: 'Modern Round Glasses',
+			image: ModernRoundGlasses,
+			price: '$120'
+		},
+		{
+			slug: 'who',
+			name: 'Retro Gold Frames',
+			image: RetroGoldenFrame,
+			price: '$140'
+		},
+		{
+			slug: 'past',
+			name: 'Sleek Silver Frames',
+			image: SleekSilverFrame,
+			price: '$150'
+		},
+		{
+			slug: 'seven',
+			name: 'Classic Black Frames',
+			image: ClassicBlackFrame,
+			price: '$100'
+		},
+		{
+			slug: 'national',
 			name: 'Minimalist White Frames',
 			image: MinimalistWhiteFrame,
 			price: '$130'
 		}
 	];
 
+	let store_name = 'DigiStore';
+	const URL = 'http://127.0.0.1:8000';
 	const modal = createModalPopup({
-		url: 'http://152.228.229.38:8000/vto/:store_name/:product_slug/',
+		url: `${URL}/vto/:store_name/:product_slug/`,
 		sandbox: 'allow-forms allow-scripts allow-same-origin allow-popups allow-downloads',
 		onClose: () => {
 			const modal = createModalPopup({
-				url: 'http://152.228.229.38:8000/vto/feedback/',
+				url: `${URL}/vto/feedback/`,
 				sandbox: 'allow-forms allow-scripts allow-same-origin'
 			});
 			modal.openPopup();
