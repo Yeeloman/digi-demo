@@ -9,39 +9,39 @@
 
 	let products = [
 		{
-			slug: 'attention',
+			slug: 'peyton',
 			name: 'Modern Round Glasses',
 			image: ModernRoundGlasses,
 			price: '$120'
 		},
 		{
-			slug: 'who',
+			slug: 'odyssey',
 			name: 'Retro Gold Frames',
 			image: RetroGoldenFrame,
 			price: '$140'
 		},
 		{
-			slug: 'past',
+			slug: 'jamaica',
 			name: 'Sleek Silver Frames',
 			image: SleekSilverFrame,
 			price: '$150'
 		},
 		{
-			slug: 'seven',
+			slug: 'shiny-5',
 			name: 'Classic Black Frames',
 			image: ClassicBlackFrame,
 			price: '$100'
 		},
 		{
-			slug: 'national',
+			slug: 'black',
 			name: 'Minimalist White Frames',
 			image: MinimalistWhiteFrame,
 			price: '$130'
 		}
 	];
 
-	let store_name = 'DigiStore';
-	const URL = 'http://127.0.0.1:8000';
+	let store_name = 'lnko';
+	const URL = 'https://vto.digiwearit.com';
 	const modal = createModalPopup({
 		url: `${URL}/vto/:store_name/:product_slug/`,
 		sandbox: 'allow-forms allow-scripts allow-same-origin allow-popups allow-downloads',
