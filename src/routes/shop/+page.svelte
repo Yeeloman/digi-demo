@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { createModalPopup } from 'viewink';
+	import { createModalPopup } from '$lib/scripts/index.mjs';
 	// import { createModalPopup } from 'viewink';
 	import ClassicBlackFrame from '$lib/assets/products/classic_black_frame.jpg';
 	import ModernRoundGlasses from '$lib/assets/products/modern_round_glasses.webp';
